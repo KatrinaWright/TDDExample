@@ -4,10 +4,10 @@ def application(text=None):
     
     # Convert to lowercase and count only letters
     text = text.lower()
-    letter_counts = {}
+    char_counts = {}
     
     for char in text:
-        if char.isalpha():
-            letter_counts[char] = letter_counts.get(char, 0) + 1
+        if char.isalnum():  # Changed from isalpha() to isalnum()
+            char_counts[char] = char_counts.get(char, 0) + 1
     
-    return max(letter_counts.values()) if letter_counts else 0
+    return max(char_counts.values()) if char_counts else 0
