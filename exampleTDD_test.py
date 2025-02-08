@@ -8,3 +8,6 @@ def test_empty():
 
 def test_long():
     assert application("Mississippi dreams a dream today") == 5
+
+def test_single():
+    assert application("Hallelujah!") == 3
