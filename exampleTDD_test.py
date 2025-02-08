@@ -5,3 +5,6 @@ def test_exists():
 
 def test_empty():
     assert application() == 0
+
+def test_long():
+    assert application("Mississippi dreams a dream today") == 5
