@@ -1,0 +1,17 @@
+{
+    "name": "tdd-guessing-game",
+    "version": "1.0.0",
+    "description": "A TDD learning exercise",
+    "main": "game.js",
+    "scripts": {
+      "test": "jest --watchAll",
+      "test:coverage": "jest --coverage"
+    },
+    "devDependencies": {
+      "jest": "^27.0.6",
+      "jsdom": "^16.6.0"
+    },
+    "jest": {
+      "testEnvironment": "jsdom"
+    }
+  }
