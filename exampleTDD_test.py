@@ -14,3 +14,6 @@ def test_single():
 
 def test_punctuation():
     assert application("Mr. Marmamott - marry me, Monday!") == 7
+
+def test_numbers():
+    assert application("111222 333444 555666 777888 9990001") == 4 
