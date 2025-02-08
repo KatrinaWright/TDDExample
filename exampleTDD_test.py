@@ -11,3 +11,6 @@ def test_long():
 
 def test_single():
     assert application("Hallelujah!") == 3
+
+def test_punctuation():
+    assert application("Mr. Marmamott - marry me, Monday!") == 7
