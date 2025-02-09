@@ -3,17 +3,25 @@
   "version": "1.0.0",
   "description": "A TDD learning exercise",
   "main": "game.js",
-  "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll",
-    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+    "test": "jest --watchAll",
+    "test:coverage": "jest --coverage",
+    "dev": "http-server . -p 3000",
+    "start": "http-server . -p 3000"
   },
   "devDependencies": {
-    "jest": "^29.5.0",
-    "jest-environment-jsdom": "^29.5.0"
+    "http-server": "^14.1.1",
+    "jest": "^27.5.1",
+    "jest-environment-jsdom": "^27.5.1"
   },
   "jest": {
     "testEnvironment": "jsdom",
-    "transform": {}
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "setupFiles": [
+      "./setup-tests.js"
+    ]
   }
 }
